@@ -12,6 +12,7 @@ class MyButtonClass extends React.Component {
   render() {
     return (
       <>
+        {/* 三元表達式，相當於if...else */}
         {this.state.show ? <h1>{this.props.name}, 你好</h1> : ''}
         <button onClick={() => this.setState({ show: !this.state.show })}>
           切換呈現文字
