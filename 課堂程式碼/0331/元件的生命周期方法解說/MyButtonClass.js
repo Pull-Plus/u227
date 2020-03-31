@@ -7,24 +7,31 @@ class MyButtonClass extends React.Component {
     this.state = {
       inputText: '',
     }
+    // 只有元件第一次出現時會觸發
     console.log('constructor')
   }
 
   componentDidMount() {
     console.log('componentDidMount')
+    // 在這裡呼叫setState會觸發重新渲染
     this.setState({ inputText: 'hello' })
   }
 
   componentDidUpdate() {
+    // 每次呼叫setState，有可能會造成元件更新
     console.log('componentDidUpdate')
   }
 
+  componentWillMount() {
+    // 當元件消失在畫面上才會執行這裡的程式碼
+    console.log('componentWillMount')
+  }
+
   render() {
+    // 建構式完後就會呈現一次
     console.log('render')
     return (
       <>
-        {/* 三元表達式，相當於if...else */}
-
         <input
           type="text"
           value={this.state.inputText}
