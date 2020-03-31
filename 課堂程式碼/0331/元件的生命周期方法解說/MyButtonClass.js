@@ -29,6 +29,7 @@ class MyButtonClass extends React.Component {
 
   render() {
     // 建構式完後就會呈現一次
+    // 之後有任何更動就會執行一次
     console.log('render')
     return (
       <>
