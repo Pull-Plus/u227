@@ -29,9 +29,9 @@ class MyButtonClass extends React.Component {
     setTimeout(() => this.setState({ loading: false }), 3000)
   }
 
-  componentWillMount() {
+  componentWillUnmount() {
     // 當元件消失在畫面上才會執行這裡的程式碼
-    console.log('componentWillMount')
+    console.log('componentWillUnmount')
   }
 
   render() {
