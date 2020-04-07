@@ -22,9 +22,9 @@ class MyButtonClass extends React.Component {
     console.log('componentDidUpdate')
   }
 
-  componentWillMount() {
+  componentWillUnMount() {
     // 當元件消失在畫面上才會執行這裡的程式碼
-    console.log('componentWillMount')
+    console.log('componentWillUnMount')
   }
 
   render() {
